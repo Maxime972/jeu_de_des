@@ -1,7 +1,8 @@
 // Valeur current par défaut
 document.getElementById("scoreRound").innerHTML = 0;
+//console.log(document.getElementById("scoreRound").textContent);
 
-console.log(document.getElementById("scoreRound").textContent);
+document.getElementById("globaleScore").innerHTML = 0;
 
 var dices = ["one", "two", "three", "four", "five", "six"];
 var visibleId = null;
@@ -85,4 +86,19 @@ function rollDice() {
   return dice;
 }
 
-//console.log(rollDice.dice);
+// La fonction permet d'ajout le score temporaire au score glogale
+function hold(){
+  var globale = Number.parseInt(document.getElementById("globaleScore").textContent);
+
+  var current = Number.parseInt(document.getElementById("scoreRound").textContent);
+
+  var globale = globale + current;
+
+  document.getElementById("globaleScore").innerHTML = globale;
+
+  document.getElementById("scoreRound").innerHTML = 0;
+
+  if (globale >= 100) {
+    alert("Vous avez gagné");
+  }
+}

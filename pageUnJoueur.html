@@ -73,7 +73,8 @@
 
                 <div id="roundScore" class="rounded-5 bg-danger">
                     <p class="fw-bold">CURRENT</p>
-                    <p>Score Round <span id="scoreRound"></span></p>
+                    <p>Score Round</p>
+                    <p><span id="scoreRound"></span></p>
                 </div>
             </div>
 
@@ -81,8 +82,9 @@
                 <div>
                     <p>Player</p>
                 </div>
-                <div>
+                <div id="globale">
                     <p>Score globale</p>
+                    <p><span id="globaleScore"></span></p>
                 </div>
                 <div class="py-1">
                     <button onclick="rollDice()" type="button" class="btn btn-secondary rounded-5">
@@ -97,7 +99,7 @@
                     </button>
                 </div>
                 <div class="py-1">
-                    <button type="button" class="btn btn-success rounded-5">
+                    <button onclick="hold()" type="button" class="btn btn-success rounded-5">
                         <svg class="d-inline" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                             <path fill="currentColor"
