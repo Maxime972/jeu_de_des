@@ -2,7 +2,7 @@
 document.getElementById("scoreRound").innerHTML = 0;
 //console.log(document.getElementById("scoreRound").textContent);
 
-document.getElementById("globaleScore").innerHTML = 0;
+document.getElementById("globaleScore").innerHTML = 99;
 
 var dices = ["one", "two", "three", "four", "five", "six"];
 var visibleId = null;
@@ -33,6 +33,15 @@ function showDice(dice) {
       }
     }
   }
+
+  // La méthode désactive un bouton
+function desactiver(id){
+  var node = document.getElementById(id);
+  var a = document.createAttribute("disabled");
+  a.value = "disabled";
+  node.setAttributeNode(a);
+  console.log(node.getAttribute("disabled"));
+}
 
 function rollDice() {
   var scoreRound = Number.parseInt(
@@ -99,6 +108,10 @@ function hold(){
   document.getElementById("scoreRound").innerHTML = 0;
 
   if (globale >= 100) {
-    alert("Vous avez gagné");
+    alert("Vous avez gagné !");
+
+    desactiver("rollDice");
+    desactiver("hold");
+   
   }
 }
