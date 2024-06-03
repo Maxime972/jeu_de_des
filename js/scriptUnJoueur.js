@@ -1,5 +1,5 @@
 // Valeur current à zéro
-document.getElementById("scoreRound").innerHTML = 0;
+document.getElementById("scoreRound").innerHTML = 99;
 //console.log(document.getElementById("scoreRound").textContent);
 
 // Valeur globale à zéro
@@ -35,6 +35,18 @@ function hide() {
       div.style.display = "none";
     }
   }
+}
+
+// Affichage Victoire
+function affiWin(id){
+  var node = document.getElementById(id);
+  node.style.display = "flex";
+}
+
+// Enlève l'affichage victoire
+function supAffiWin(id){
+  var node = document.getElementById(id);
+  node.style.display = "none";
 }
 
 // La fonction désactive un bouton
@@ -118,7 +130,7 @@ function hold() {
   document.getElementById("scoreRound").innerHTML = 0;
 
   if (globale >= 100) {
-    alert("Vous avez gagné !");
+    affiWin("win");
 
     desactiver("rollDice");
     desactiver("hold");
@@ -133,6 +145,8 @@ function newGame() {
 
   // Valeur globale à zéro
   document.getElementById("globaleScore").innerHTML = 0;
+
+  supAffiWin("win");
 
   activer("rollDice");
   activer("hold");
