@@ -32,7 +32,7 @@ body {
 }
 
 #dice svg {
-    height: auto;
+    max-height: 240px;
     color: rgb(14, 130, 207);
 }
 

@@ -1,5 +1,5 @@
 // Valeur current à zéro
-document.getElementById("scoreRound").innerHTML = 99;
+document.getElementById("scoreRound").innerHTML = 0;
 //console.log(document.getElementById("scoreRound").textContent);
 
 // Valeur globale à zéro
@@ -30,7 +30,7 @@ function hide() {
     div = document.getElementById(dice);
 
     if (visibleId === dice) {
-      div.style.display = "block";
+      div.style.display = "inline-grid";
     } else {
       div.style.display = "none";
     }
