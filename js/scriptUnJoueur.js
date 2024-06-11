@@ -65,8 +65,11 @@ function activer(id) {
   //console.log(node.getAttribute("disabled"));
 }
 
-// La fonction permet de lancer le dés
-function rollDice() {
+
+const roll = document.getElementById("rollDice");
+console.log(roll);
+// On lance le dé
+roll.addEventListener("click", (event) => {
   var scoreRound = Number.parseInt(
     document.getElementById("scoreRound").textContent
   );
@@ -111,10 +114,13 @@ function rollDice() {
   } else {
     document.getElementById("scoreRound").innerHTML = scoreRound + dice;
   }
-}
+});
 
-// La fonction permet d'ajout le score temporaire au score glogale
-function hold() {
+
+const hold = document.getElementById("hold");
+console.log(hold);
+// On ajoute le score du round au score global
+hold.addEventListener("click", (event) => {
   var globale = Number.parseInt(
     document.getElementById("globaleScore").textContent
   );
@@ -135,10 +141,13 @@ function hold() {
     desactiver("rollDice");
     desactiver("hold");
   }
-}
+});
 
-// Relance une nouvelle partie et réactiver les boutons
-function newGame() {
+
+const newGame = document.getElementById("newGame");
+console.log(newGame);
+// Nouvelle partie
+newGame.addEventListener("click", (event) => {
   // Valeur current à zéro
   document.getElementById("scoreRound").innerHTML = 0;
   //console.log(document.getElementById("scoreRound").textContent);
@@ -150,4 +159,4 @@ function newGame() {
 
   activer("rollDice");
   activer("hold");
-}
+})
