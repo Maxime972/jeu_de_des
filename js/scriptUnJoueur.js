@@ -1,82 +1,24 @@
+import { showDice , hide , affiWin , supAffiWin , desactiver , activer} from "./fonctions_jeu_des.js";
+
 // Valeur current à zéro
 document.getElementById("scoreRound").innerHTML = 0;
-//console.log(document.getElementById("scoreRound").textContent);
 
 // Valeur globale à zéro
 document.getElementById("globaleScore").innerHTML = 0;
 
-// id des images des 6 faces du dés
-var dices = ["one", "two", "three", "four", "five", "six"];
-
-var visibleId = null;
-
-// La fonction permet d'afficher le dés
-function showDice(dice) {
-  if (visibleId !== dice) {
-    visibleId = dice;
-
-    console.log("visible = " + visibleId);
-  }
-
-  hide();
-}
-
-// La fonction permet de cacher le dés
-function hide() {
-  var div, i, dice;
-
-  for (i = 0; i < dices.length; i++) {
-    dice = dices[i];
-    div = document.getElementById(dice);
-
-    if (visibleId === dice) {
-      div.style.display = "inline-grid";
-    } else {
-      div.style.display = "none";
-    }
-  }
-}
-
-// Affichage Victoire
-function affiWin(id){
-  var node = document.getElementById(id);
-  node.style.display = "flex";
-}
-
-// Enlève l'affichage victoire
-function supAffiWin(id){
-  var node = document.getElementById(id);
-  node.style.display = "none";
-}
-
-// La fonction désactive un bouton
-function desactiver(id) {
-  var node = document.getElementById(id);
-  var attribut = document.createAttribute("disabled");
-  attribut.value = "disabled";
-  node.setAttributeNode(attribut);
-  //console.log(node.getAttribute("disabled"));
-}
-
-// La fonction active un bouton
-function activer(id) {
-  var node = document.getElementById(id);
-  node.removeAttribute("disabled");
-  //console.log(node.getAttribute("disabled"));
-}
-
-
 const roll = document.getElementById("rollDice");
-console.log(roll);
-// On lance le dé
+//console.log(roll);
+// Lancement du dé lorsqu'on clique sur le bouton "Roll dice"
 roll.addEventListener("click", (event) => {
   var scoreRound = Number.parseInt(
     document.getElementById("scoreRound").textContent
   );
 
+  // Tire un nombre entier compris entre 1 et 6
   var dice = Math.round(Math.random() * (6 - 1) + 1);
   console.log("dés = " + dice);
 
+  // Affiche les id des faces du dé
   var des;
   switch (dice) {
     case 1:
@@ -109,6 +51,7 @@ roll.addEventListener("click", (event) => {
 
   showDice(des);
 
+  // Condition si le dé est égale à 1, le score du Round est remis à zéro
   if (dice == 1) {
     document.getElementById("scoreRound").innerHTML = 0;
   } else {
@@ -135,6 +78,7 @@ hold.addEventListener("click", (event) => {
 
   document.getElementById("scoreRound").innerHTML = 0;
 
+  // Condition sur la fin de la partie 
   if (globale >= 100) {
     affiWin("win");
 
@@ -159,4 +103,4 @@ newGame.addEventListener("click", (event) => {
 
   activer("rollDice");
   activer("hold");
-})
+});
