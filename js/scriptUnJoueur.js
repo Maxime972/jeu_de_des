@@ -50,6 +50,7 @@ roll.addEventListener("click", (event) => {
   }
 
   showDice(des);
+  hide();
 
   // Condition si le dé est égale à 1, le score du Round est remis à zéro
   if (dice == 1) {

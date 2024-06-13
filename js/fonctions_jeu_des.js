@@ -15,7 +15,6 @@ function showDice(dice) {
     console.log("visible = " + visibleId);
   }
 
-  hide();
 }
 
 /**
