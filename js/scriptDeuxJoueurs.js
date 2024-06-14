@@ -223,7 +223,8 @@ newGame.addEventListener("click", (event) => {
   supAffiWin("win");
 
   activer("rollDice1");
-  
+
+  desactiver("hold1");
   desactiver("rollDice2");
   desactiver("hold2");
 });
