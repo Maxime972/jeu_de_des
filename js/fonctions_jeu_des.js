@@ -36,21 +36,21 @@ function hide() {
 }
 
 /**
- * Affiche la fin d'une partie
+ * Affiche une div
  * 
  * @param {String} id 
  */
-function affiWin(id) {
+function affiDiv(id) {
   var node = document.getElementById(id);
   node.style.display = "flex";
 }
 
 /**
- * Enlève l'affichage de la fin d'une partie
+ * Enlève l'affichage d'une div
  * 
  * @param {String} id 
  */
-function supAffiWin(id) {
+function supAffiDiv(id) {
   var node = document.getElementById(id);
   node.style.display = "none";
 }
@@ -79,4 +79,4 @@ function activer(id) {
   //console.log(node.getAttribute("disabled"));
 }
 
-export { showDice, hide, affiWin, supAffiWin, desactiver, activer };
+export { showDice, hide, affiDiv, supAffiDiv, desactiver, activer };

@@ -1,4 +1,4 @@
-import { showDice , hide , affiWin , supAffiWin , desactiver , activer} from "./fonctions_jeu_des.js";
+import { showDice , hide , affiDiv , supAffiDiv , desactiver , activer} from "./fonctions_jeu_des.js";
 
 // Valeur current à zéro
 document.getElementById("scoreRound").innerHTML = 0;
@@ -81,7 +81,7 @@ hold.addEventListener("click", (event) => {
 
   // Condition sur la fin de la partie 
   if (globale >= 100) {
-    affiWin("win");
+    affiDiv("win");
 
     desactiver("rollDice");
     desactiver("hold");
@@ -100,7 +100,7 @@ newGame.addEventListener("click", (event) => {
   // Valeur globale à zéro
   document.getElementById("globaleScore").innerHTML = 0;
 
-  supAffiWin("win");
+  supAffiDiv("win");
 
   activer("rollDice");
   activer("hold");
