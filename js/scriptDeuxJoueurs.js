@@ -11,8 +11,8 @@ import {
 document.getElementById("scoreRound").innerHTML = 0;
 
 // Valeur globale à zéro
-document.getElementById("globaleScore1").innerHTML = 90;
-document.getElementById("globaleScore2").innerHTML = 90;
+document.getElementById("globaleScore1").innerHTML = 0;
+document.getElementById("globaleScore2").innerHTML = 0;
 
 // On désactive hold 1 pour obliger le joueur 1 à lancer le dé au moins une fois
 affiDiv("cercle1");
@@ -183,7 +183,7 @@ hold1.addEventListener("click", (event) => {
 
   // Condition sur la fin de la partie
   if (globale1 >= 100) {
-    affiDiv("win");
+    affiDiv("win1");
 
     desactiver("rollDice2");
     desactiver("hold2");
@@ -219,7 +219,7 @@ hold2.addEventListener("click", (event) => {
 
   // Condition sur la fin de la partie
   if (globale2 >= 100) {
-    affiDiv("win");
+    affiDiv("win2");
 
     desactiver("rollDice1");
     desactiver("hold1");
@@ -238,7 +238,8 @@ newGame.addEventListener("click", (event) => {
   document.getElementById("globaleScore1").innerHTML = 0;
   document.getElementById("globaleScore2").innerHTML = 0;
 
-  supAffiDiv("win");
+  supAffiDiv("win1");
+  supAffiDiv("win2");
 
   activer("rollDice1");
 
