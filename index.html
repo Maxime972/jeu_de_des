@@ -17,18 +17,43 @@
 
 <body>
     <main>
-    <h1 class="text-center pt-5">Jeu de dés</h1>
-    <p class="text-center pt-5">Nombre de joueurs ?</p>
+        <h1 class="text-center pt-5">Jeu de dés</h1>
+        <p class="text-center pt-4">Nombre de joueurs ?</p>
 
-    <div class="text-center py-3">
-        <a href="/pageUnJoueur.html">
-            <button type="button" class="btn btn-secondary">1 Joueur</button>
-        </a>
-    </div>
-    <div class="text-center py-3">
-        <a href="/pageDeuxJoueurs.html">
-            <button type="button" class="btn btn-secondary">2 Joueurs</button>
-        </a>
+        <div class="text-center py-3">
+            <a href="/pageUnJoueur.html">
+                <button type="button" class="btn btn-secondary">1 Joueur</button>
+            </a>
+        </div>
+        <div class="text-center py-3">
+            <a href="/pageDeuxJoueurs.html">
+                <button type="button" class="btn btn-secondary">2 Joueurs</button>
+            </a>
+        </div>
+
+        <div class="pt-5 px-5 mx-md-5 px-md-5">
+            <h5 class="text-center">Règles du jeu :</h5>
+            <p class="regle">
+                Le jeu comprend 2 joueurs sur un seul et même écran. <br>
+                Chaque joueur possède un score temporaire (ROUND) et un score global (GLOBAL). À chaque tour, le joueur
+                a son ROUND initialisé à 0 et peut lancer un dé autant de fois qu'il le souhaite. Le résultat d’un
+                lancer est ajouté au ROUND.
+            </p>
+            <p class="regle">
+                Lors de son tour, le joueur peut décider à tout moment de :
+            <ul class="regle">
+                <li>
+                    Cliquer sur l’option “Hold”, qui permet d’envoyer les points du ROUND vers le GLOBAL. Ce sera alors
+                    le tour de l’autre joueur.
+                </li>
+                <li>
+                    Lancer le dé. S’il obtient un 1, son score ROUND est perdu et c’est la fin de son tour.
+                </li>
+            </ul>
+            </p>
+            <p class="regle">
+                Le premier joueur qui atteint les 100 points sur global gagne le jeu.
+            </p>
         </div>
     </main>
 </body>
