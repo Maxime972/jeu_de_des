@@ -1,4 +1,11 @@
-import { showDice , hide , affiDiv , supAffiDiv , desactiver , activer} from "./fonctions_jeu_des.js";
+import {
+  showDice,
+  hide,
+  affiDiv,
+  supAffiDiv,
+  desactiver,
+  activer,
+} from "./fonctions_jeu_des.js";
 
 // Valeur current à zéro
 document.getElementById("scoreRound").innerHTML = 0;
@@ -60,7 +67,6 @@ roll.addEventListener("click", (event) => {
   }
 });
 
-
 const hold = document.getElementById("hold");
 console.log(hold);
 // On ajoute le score du round au score global
@@ -79,7 +85,7 @@ hold.addEventListener("click", (event) => {
 
   document.getElementById("scoreRound").innerHTML = 0;
 
-  // Condition sur la fin de la partie 
+  // Condition sur la fin de la partie
   if (globale >= 100) {
     affiDiv("win");
 
@@ -87,7 +93,6 @@ hold.addEventListener("click", (event) => {
     desactiver("hold");
   }
 });
-
 
 const newGame = document.getElementById("newGame");
 console.log(newGame);

@@ -7,15 +7,15 @@ body {
     font-family: "Lato", sans-serif;
 }
 
-.container{
+.container {
     position: relative;
 }
 
-#restart{
+#restart {
     height: 15px;
 }
 
-.player{
+.player {
     display: inline-flex;
 }
 
@@ -33,36 +33,36 @@ body {
     color: rgb(14, 130, 207);
 }
 
-#two{
+#two {
     display: none;
 }
 
-#three{
+#three {
     display: none;
 }
 
-#four{
+#four {
     display: none;
 }
 
-#five{
+#five {
     display: none;
 }
 
-#six{
+#six {
     display: none;
 }
 
 
-.score svg{
+.score svg {
     height: 15px;
 }
 
-#roundScore{
+#roundScore {
     color: white;
 }
 
-.score button{
+.score button {
     width: 120px;
 }
 
@@ -75,7 +75,7 @@ body {
     background-color: greenyellow;
 }
 
-#win1{
+#win1 {
     display: none;
     position: absolute;
     top: 50%;
@@ -87,16 +87,17 @@ body {
     border-radius: 50%;
 }
 
-#win1 p{
+#win1 p {
     position: absolute;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     font-size: 25px;
     color: white;
     font-weight: 700;
 }
 
-#win2{
+#win2 {
     display: none;
     position: absolute;
     top: 50%;
@@ -108,9 +109,10 @@ body {
     border-radius: 50%;
 }
 
-#win2 p{
+#win2 p {
     position: absolute;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     font-size: 25px;
     color: white;

@@ -6,7 +6,7 @@ import {
   desactiver,
   activer,
   affiCercle,
-  suppCercle
+  suppCercle,
 } from "./fonctions_jeu_des.js";
 
 // Valeur current à zéro
@@ -72,20 +72,17 @@ roll1.addEventListener("click", (event) => {
   showDice(des);
   hide();
 
-
-
   // Condition si le dé est égale à 1, le score du Round est remis à zéro
   if (dice == 1) {
     document.getElementById("scoreRound").innerHTML = 0;
 
     desactiver("rollDice1");
     desactiver("hold1");
-    
+
     activer("rollDice2");
 
     affiCercle("cercle2");
     suppCercle("cercle1");
-
   } else {
     document.getElementById("scoreRound").innerHTML = scoreRound + dice;
     activer("hold1");
@@ -150,7 +147,6 @@ roll2.addEventListener("click", (event) => {
 
     affiCercle("cercle1");
     suppCercle("cercle2");
-
   } else {
     document.getElementById("scoreRound").innerHTML = scoreRound + dice;
     activer("hold2");

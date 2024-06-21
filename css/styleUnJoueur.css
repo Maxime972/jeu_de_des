@@ -7,11 +7,11 @@ body {
     font-family: "Lato", sans-serif;
 }
 
-.container{
+.container {
     position: relative;
 }
 
-#restart{
+#restart {
     height: 15px;
 }
 
@@ -20,40 +20,40 @@ body {
     color: rgb(14, 130, 207);
 }
 
-#two{
+#two {
     display: none;
 }
 
-#three{
+#three {
     display: none;
 }
 
-#four{
+#four {
     display: none;
 }
 
-#five{
+#five {
     display: none;
 }
 
-#six{
+#six {
     display: none;
 }
 
 
-.score svg{
+.score svg {
     height: 15px;
 }
 
-#roundScore{
+#roundScore {
     color: white;
 }
 
-.score button{
+.score button {
     width: 120px;
 }
 
-#win{
+#win {
     display: none;
     position: absolute;
     top: 50%;
@@ -65,9 +65,10 @@ body {
     border-radius: 10%;
 }
 
-#win p{
+#win p {
     position: absolute;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     font-size: 25px;
     color: white;

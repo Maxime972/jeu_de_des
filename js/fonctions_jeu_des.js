@@ -5,7 +5,7 @@ var visibleId = null;
 
 /**
  * Affiche le numéro du dé
- * 
+ *
  * @param {number} dice numéro du dé
  */
 function showDice(dice) {
@@ -14,7 +14,6 @@ function showDice(dice) {
 
     console.log("visible = " + visibleId);
   }
-
 }
 
 /**
@@ -37,8 +36,8 @@ function hide() {
 
 /**
  * Affiche une div
- * 
- * @param {String} id 
+ *
+ * @param {String} id
  */
 function affiDiv(id) {
   var node = document.getElementById(id);
@@ -47,8 +46,8 @@ function affiDiv(id) {
 
 /**
  * Enlève l'affichage d'une div
- * 
- * @param {String} id 
+ *
+ * @param {String} id
  */
 function supAffiDiv(id) {
   var node = document.getElementById(id);
@@ -57,8 +56,8 @@ function supAffiDiv(id) {
 
 /**
  * Désactive les boutons du jeu
- * 
- * @param {String} id 
+ *
+ * @param {String} id
  */
 function desactiver(id) {
   var node = document.getElementById(id);
@@ -70,8 +69,8 @@ function desactiver(id) {
 
 /**
  * Active les boutons du jeu
- * 
- * @param {String} id 
+ *
+ * @param {String} id
  */
 function activer(id) {
   var node = document.getElementById(id);
@@ -81,23 +80,31 @@ function activer(id) {
 
 /**
  * Change la couleur du cercle en greenyellow
- * 
- * @param {String} id 
+ *
+ * @param {String} id
  */
-function affiCercle(id){
+function affiCercle(id) {
   var node = document.getElementById(id);
   node.style.backgroundColor = "greenyellow";
 }
 
 /**
  * Change la couleur du cercle en white
- * 
- * @param {String} id 
+ *
+ * @param {String} id
  */
-function suppCercle(id){
+function suppCercle(id) {
   var node = document.getElementById(id);
   node.style.backgroundColor = "white";
 }
 
-
-export { showDice, hide, affiDiv, supAffiDiv, desactiver, activer , affiCercle , suppCercle};
+export {
+  showDice,
+  hide,
+  affiDiv,
+  supAffiDiv,
+  desactiver,
+  activer,
+  affiCercle,
+  suppCercle,
+};
