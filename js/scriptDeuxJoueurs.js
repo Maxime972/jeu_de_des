@@ -5,6 +5,8 @@ import {
   supAffiDiv,
   desactiver,
   activer,
+  affiCercle,
+  suppCercle
 } from "./fonctions_jeu_des.js";
 
 // Valeur current à zéro
@@ -15,10 +17,11 @@ document.getElementById("globaleScore1").innerHTML = 0;
 document.getElementById("globaleScore2").innerHTML = 0;
 
 // On désactive hold 1 pour obliger le joueur 1 à lancer le dé au moins une fois
-affiDiv("cercle1");
+affiCercle("cercle1");
 desactiver("hold1");
+
 // On désactive le joueur 2 car c'est le joueur 1 qui commence
-supAffiDiv("cercle2");
+suppCercle("cercle2");
 desactiver("rollDice2");
 desactiver("hold2");
 
@@ -80,8 +83,8 @@ roll1.addEventListener("click", (event) => {
     
     activer("rollDice2");
 
-    affiDiv("cercle2");
-    supAffiDiv("cercle1");
+    affiCercle("cercle2");
+    suppCercle("cercle1");
 
   } else {
     document.getElementById("scoreRound").innerHTML = scoreRound + dice;
@@ -145,8 +148,8 @@ roll2.addEventListener("click", (event) => {
 
     activer("rollDice1");
 
-    affiDiv("cercle1");
-    supAffiDiv("cercle2");
+    affiCercle("cercle1");
+    suppCercle("cercle2");
 
   } else {
     document.getElementById("scoreRound").innerHTML = scoreRound + dice;
@@ -178,8 +181,8 @@ hold1.addEventListener("click", (event) => {
 
   activer("rollDice2");
 
-  affiDiv("cercle2");
-  supAffiDiv("cercle1");
+  affiCercle("cercle2");
+  suppCercle("cercle1");
 
   // Condition sur la fin de la partie
   if (globale1 >= 100) {
@@ -214,8 +217,8 @@ hold2.addEventListener("click", (event) => {
 
   activer("rollDice1");
 
-  affiDiv("cercle1");
-  supAffiDiv("cercle2");
+  affiCercle("cercle1");
+  suppCercle("cercle2");
 
   // Condition sur la fin de la partie
   if (globale2 >= 100) {
@@ -247,6 +250,6 @@ newGame.addEventListener("click", (event) => {
   desactiver("rollDice2");
   desactiver("hold2");
 
-  affiDiv("cercle1");
-  supAffiDiv("cercle2");
+  affiCercle("cercle1");
+  suppCercle("cercle2");
 });

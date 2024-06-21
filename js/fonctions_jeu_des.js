@@ -79,4 +79,25 @@ function activer(id) {
   //console.log(node.getAttribute("disabled"));
 }
 
-export { showDice, hide, affiDiv, supAffiDiv, desactiver, activer };
+/**
+ * Change la couleur du cercle en greenyellow
+ * 
+ * @param {String} id 
+ */
+function affiCercle(id){
+  var node = document.getElementById(id);
+  node.style.backgroundColor = "greenyellow";
+}
+
+/**
+ * Change la couleur du cercle en white
+ * 
+ * @param {String} id 
+ */
+function suppCercle(id){
+  var node = document.getElementById(id);
+  node.style.backgroundColor = "white";
+}
+
+
+export { showDice, hide, affiDiv, supAffiDiv, desactiver, activer , affiCercle , suppCercle};

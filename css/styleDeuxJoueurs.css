@@ -16,14 +16,12 @@ body {
 }
 
 .player{
-    position: relative;
+    display: inline-flex;
 }
 
 #cercle1 {
-    position: absolute;
-    display: flex;
-    left: -5%;
-    top: 25%;
+    margin-top: 10%;
+    margin-left: 3px;
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -69,10 +67,8 @@ body {
 }
 
 #cercle2 {
-    position: absolute;
-    display: flex;
-    left: 90%;
-    top: 25%;
+    margin-top: 10%;
+    margin-left: 3px;
     width: 25px;
     height: 25px;
     border-radius: 50%;
