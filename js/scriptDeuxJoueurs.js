@@ -249,3 +249,15 @@ newGame.addEventListener("click", (event) => {
   affiCercle("cercle1");
   suppCercle("cercle2");
 });
+
+/**
+ * Cette fonction permet d'afficher un message en fonction de la taille de l'écran
+ */
+setInterval( () => {
+  console.log(window.innerWidth);
+  if (window.innerWidth < 470) {
+    document.querySelector('#rotate-message').style.display = 'flex';
+  } else {
+    document.querySelector('#rotate-message').style.display = 'none';
+  }
+} , 1000);
